@@ -1,0 +1,54 @@
+/* common style */
+html{
+    font-family: 'Pretendard';
+    font-size:var(--font-size-pc,20px); /* 변수를 적용하지 못하는 경우 ,뒤에 정보로 대체되어 보여진다. */
+    line-height:1.4;
+    word-break: break-all;
+}
+.innerContent{
+    width:1440px;
+    margin:0 auto;
+}
+.btnCommon{
+    text-transform: uppercase;
+    font-size:0.9rem; /* 18px/20px=0.9 */
+    display: inline-block;
+    color:#fff;
+    background-color: #000;
+    padding:0.8rem 2.15rem; /* 16px/20px=0.8 43px/20px=2.15 */
+}
+.btnCommon:hover{
+    color:var(--main-color);
+}
+.btnCommon:active{
+    color:#000;
+    background-color: var(--main-color);
+}
+
+:root{ /* 공통적으로 사용하기 위한 정보를 변수로 설정해서 적용해줄 수 있다. var()*/
+    --main-color:#740078;
+    --font-size-pc:20px;
+    --font-size-tab:18px;
+    --font-size-mobile:14px;
+    --font-weight-thin:200;
+    --font-weight-bold:600;
+}
+/* thin - 얇은 폰트 적용 semantic tag */
+thin{
+    font-weight:var(--font-weight-thin);
+}
+mc{
+    color:var(--main-color);
+}
+h3{
+    font-size:0.9rem;
+    letter-spacing: 0.3rem; /* 자간 */
+    margin-bottom:1rem;
+}
+h4{
+    font-size: 3.5rem;
+    font-weight:var(--font-weight-bold);
+    margin-bottom:1rem;
+    text-transform: uppercase;
+}
+

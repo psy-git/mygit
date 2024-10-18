@@ -1,0 +1,307 @@
+/* /////////////// pc 페이지 디자인 /////////////// */
+/* headers */
+header{
+    /* background-color: var(--main-color); */
+    /* border-bottom:1px solid var(--main-color); */
+    height:5rem;
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:1000;
+}
+header .innerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100%;
+}
+.mo{display: none;}
+.gnb{
+    display: flex;
+    text-transform: uppercase;
+    color:#fff;
+}
+.gnb>li{
+    margin-right:3rem;
+}
+.gnb>li:last-of-type{
+    margin-right: 0;
+}
+/* hero-section */
+.hero{
+    height: 100vh;
+    position:relative;
+}
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.heroDesc{
+    position:absolute;
+    width: 100%;
+    height:100%;
+    left:0;
+    top:0;
+    background-color: rgba(0, 0, 0,0.5);
+    color:#fff;
+}
+.heroDesc .innerContent{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.heroDesc h4{
+    font-size:3.15rem;
+    margin:1.5rem 0;
+    text-transform:capitalize;
+}
+/* con1 */
+.con1{
+    padding-top:7.5rem;
+    text-align: center;
+    position:relative;
+}
+.con1img{
+    margin-top:4rem;
+    line-height: 0; /* 이미지가 baseline을 기준으로 배치되면서 생기는 아래 공간을 제거하기 위해서 이미지의 영역 figure을 만들어 주고 여기에 line-heihgt를 0으로 만들어준다. */
+}
+.con1:after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:2rem; /* 40px */
+    background-color:var(--main-color);
+    z-index:-1;
+}
+/* con2 */
+.con2{
+    padding-top:7.5rem;
+    padding-bottom:3.5rem;
+}
+.con2 .innerContent{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.con2 section{
+    width:calc(50% - 3.5rem);
+}
+.pro3{
+    margin-top:3.5rem;
+}
+p.desc{
+    margin-bottom:4rem;
+}
+.pro1>p{
+    margin-bottom:1.5rem;
+}
+.pro1>p:last-of-type{
+    margin-bottom:0;
+}
+.pro2 dl{
+    display:flex;
+    flex-wrap:wrap;
+}
+.pro2 dl>dt{
+    width:12rem;
+    margin-bottom:1.5rem;
+    color:var(--main-color);
+    font-weight: var(--font-weight-bold);
+}
+.pro2 dl>dd{
+    width:calc(100% - 12rem);
+}
+.pro2 p{
+    margin-bottom:1.5rem;
+}
+.pro2 p:last-of-type{
+    margin-bottom: 0;
+}
+.charList{
+    display: flex;
+    margin-bottom:1.5rem;
+}
+.charList>li{
+    border:1px solid var(--main-color);
+    color:var(--main-color);
+    padding:0.5rem 1rem;
+    font-size: 0.7rem;
+}
+.charList>li.rev{
+    background-color: var(--main-color);
+    color:#fff;
+}
+.pro3 dt{
+    margin-bottom:1.5rem;
+    color:var(--main-color);
+    font-weight: var(--font-weight-bold);
+}
+.certList>li{
+    margin-bottom:1rem;
+    display:flex;
+}
+.certList>li>i{
+    width:12rem;
+}
+.certList>li>span{
+    width:calc(100% - 12rem);
+}
+.certList>li:last-of-type{
+    margin-bottom:0;
+}
+/* con3 */
+.con3{
+    background-color: var(--main-color);
+    padding:3.5rem 0;
+    color:#fff;
+}
+.con3 h5{
+    font-weight:var(--font-weight-bold);
+    margin-bottom:1.5rem;
+}
+.eduList{
+    display: flex;
+    flex-wrap: wrap;
+}
+.eduList>li{
+    width:calc((100% - (3 - 1)*1rem)/3); /* 변경 - 3을 원하는 개수대로 변경해줄수 있다 */
+    box-sizing: border-box;
+    margin-right:1rem;
+    padding:1rem 0;
+}
+.eduList>li:nth-of-type(3n){ /* 변경 */
+    margin-right:0;
+}
+.eduList h6 img{
+    height:1.5rem;
+    margin-right:1rem;
+}
+.eduList h6{
+    display: flex; /* 이미지와 글자를 중앙 정렬하는 방법 */
+    align-items: center;
+    margin-bottom:1rem;
+    text-transform: uppercase;
+}
+/* con4 */
+.con4{
+    padding-top:7rem;
+    padding-bottom:7rem;
+    text-align: center;
+}
+.popupList{
+    margin-top:3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+.popupList>li{
+    width:calc((100% - (3 - 1)*1rem)/3); /* 변경 - 3을 원하는 개수대로 변경해줄수 있다 */
+    box-sizing: border-box;
+    margin-right:1rem;
+    padding:1rem 0;
+}
+.popupList>li:nth-of-type(3n){ /* 변경 */
+    margin-right:0;
+}
+.popupList>li figure{
+    margin-bottom:1rem;
+}
+.popupList>li>div:nth-of-type(1){
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popupList>li>div:nth-of-type(1) h6{
+    font-size:1.1rem;
+    font-weight:var(--font-weight-bold);
+}
+.btnDown{
+    font-size:0.9rem;
+    padding:0.7rem 1.2rem;
+    background-color: black;
+    color:#fff;
+}
+.btnDown:hover{
+    color:var(--main-color);
+}
+.popupList>li>figure{
+    line-height: 0;
+}
+.popupList>li>figure.border{ /* 배경색이 흰색인 경우 적용되는 검은색 보더입니다 */
+    border:1px solid #000;
+}
+.popupList>li>p{
+    margin:1rem 0;
+}
+.popupList>li>div:nth-of-type(2){
+    display:flex;
+}
+.popupList>li>div:nth-of-type(2)>dl{
+    /* width: 50%; */
+    flex:1; /* flex-basis:0%;flex-grow:1,flex-shrink:1; 1:1 너비로 영역을 나누어먹는다 */
+}
+.popupList>li>div:nth-of-type(2)>dl dt{
+    font-size:1.1rem;
+    font-weight:var(--font-weight-bold);
+    margin-bottom: 1rem;
+}
+.popupList>li>div:nth-of-type(2)>dl dd{
+    word-break: keep-all;
+}
+.popupList>li>div:nth-of-type(2)>dl dd{
+    text-transform: uppercase;
+    display:flex;
+    align-items: center;
+}
+.thumbColor{
+    width:1.1rem;
+    height:1.1rem;
+    background-color: #fff;
+    font-size:0;
+    margin-right: 0.5rem;
+    box-sizing: border-box;
+}
+.color_F80809{
+    background-color: #F80809;
+}
+.color_F1F101{
+    background-color: #F1F101;
+}
+.color_F46524{
+    background-color: #F46524;
+}
+.color_231F20{
+    background-color: #231F20;
+}
+.color_22573C{
+    background-color: #22573C;
+}
+.color_CF2B2E{
+    background-color: #CF2B2E;
+}
+.color_233456{
+    background-color: #233456;
+}
+.color_F2E4A1{
+    background-color: #F2E4A1;
+}
+.color_E22C77{
+    background-color: #E22C77;
+}
+.color_FFFFFF{
+    border:1px solid #000;
+}
+.color_6767A2{
+    background-color: #6767A2;
+}
+.color_B5B5C5{
+    background-color: #B5B5C5;
+}
+
